@@ -17,18 +17,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    //设置返回按钮
-    [UINavigationBar appearance].backIndicatorImage = [[UIImage imageNamed:@"Titlebackbg.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    [UINavigationBar appearance].backIndicatorTransitionMaskImage = [[UIImage imageNamed:@"Titlebackbg.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
+  
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     UIViewController *mainVC = [[ViewController alloc] init];
     UINavigationController *pNav = [[UINavigationController alloc] initWithRootViewController:mainVC];
     [pNav.navigationBar setTintColor:[UIColor blackColor]];
+    
+    //设置顶部透明
     [pNav.navigationBar setBackgroundImage:[self createImageWithColor:[UIColor clearColor]] forBarMetrics:UIBarMetricsDefault];
     [pNav.navigationBar setShadowImage:[self createImageWithColor:[UIColor clearColor]]];
-
+    
+    //设置返回按钮
+    pNav.navigationBar.backIndicatorImage = [[UIImage imageNamed:@"Titlebackbg.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    pNav.navigationBar.backIndicatorTransitionMaskImage = [[UIImage imageNamed:@"Titlebackbg.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
     self.window.rootViewController = pNav;
     [self.window makeKeyAndVisible];
     // Override point for customization after application launch.

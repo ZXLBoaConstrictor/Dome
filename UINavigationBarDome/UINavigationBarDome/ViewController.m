@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "BackEventViewController.h"
 #import "TransparentViewController.h"
+#import "TitleColorViewController.h"
 
 @interface ViewController ()
 @property (nonatomic,strong)UIView *titleView;
@@ -44,11 +45,11 @@
 -(UIView *)topTitleView{
     return _titleView;
 }
+
 -(void)nextPage{
     
     switch (self.navigationController.viewControllers.count) {
-        case 1:
-        {
+        case 1:{
             [self.navigationController pushViewController:[BackEventViewController new] animated:YES];
         }
             break;
@@ -56,7 +57,10 @@
             [self.navigationController pushViewController:[TransparentViewController new] animated:YES];
         }
             break;
-            
+        case 3:{
+            [self.navigationController pushViewController:[TitleColorViewController new] animated:YES];
+        }
+            break;
         default:{
            [self.navigationController pushViewController:[ViewController new] animated:YES];
         }

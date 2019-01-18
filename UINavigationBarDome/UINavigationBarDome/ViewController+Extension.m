@@ -8,6 +8,8 @@
 
 #import "ViewController+Extension.h"
 #import "NSObject+ZXLExtension.h"
+@interface UIViewController()<UIGestureRecognizerDelegate>
+@end
 
 @implementation UIViewController (Extension)
 
@@ -19,6 +21,7 @@
 - (void)replace_viewDidLoad{
     [self replace_viewDidLoad];
     
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleDone target:nil action:nil];//隐藏返回按钮跟随的字体
 }
 

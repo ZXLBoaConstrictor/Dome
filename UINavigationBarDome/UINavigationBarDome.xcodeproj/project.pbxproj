@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82BBBCE621F183A700D568C9 /* UINavigationController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BBBCE521F183A700D568C9 /* UINavigationController+Extension.m */; };
+		82BBBCE821F1A0F000D568C9 /* TitleWhitebackbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82BBBCE721F1A0EF00D568C9 /* TitleWhitebackbg@2x.png */; };
+		82BBBCF121F1B0D000D568C9 /* UINavigationItem+SXFixSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BBBCF021F1B0D000D568C9 /* UINavigationItem+SXFixSpace.m */; };
 		82FAB0DC21F066520084BF38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FAB0DB21F066520084BF38 /* AppDelegate.m */; };
 		82FAB0DF21F066520084BF38 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FAB0DE21F066520084BF38 /* ViewController.m */; };
 		82FAB0E421F066550084BF38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82FAB0E321F066550084BF38 /* Assets.xcassets */; };
@@ -19,6 +22,7 @@
 		82FAB11321F0739D0084BF38 /* Titlebackbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82FAB11221F0739D0084BF38 /* Titlebackbg@2x.png */; };
 		82FAB11621F075B20084BF38 /* BackEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FAB11521F075B20084BF38 /* BackEventViewController.m */; };
 		82FAB11921F0792D0084BF38 /* TransparentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FAB11821F0792D0084BF38 /* TransparentViewController.m */; };
+		82FAB11C21F085E50084BF38 /* TitleColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FAB11B21F085E50084BF38 /* TitleColorViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		82BBBCE421F183A700D568C9 /* UINavigationController+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Extension.h"; sourceTree = "<group>"; };
+		82BBBCE521F183A700D568C9 /* UINavigationController+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Extension.m"; sourceTree = "<group>"; };
+		82BBBCE721F1A0EF00D568C9 /* TitleWhitebackbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TitleWhitebackbg@2x.png"; sourceTree = "<group>"; };
+		82BBBCEF21F1B0D000D568C9 /* UINavigationItem+SXFixSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+SXFixSpace.h"; sourceTree = "<group>"; };
+		82BBBCF021F1B0D000D568C9 /* UINavigationItem+SXFixSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+SXFixSpace.m"; sourceTree = "<group>"; };
 		82FAB0D721F066520084BF38 /* UINavigationBarDome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UINavigationBarDome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82FAB0DA21F066520084BF38 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		82FAB0DB21F066520084BF38 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +72,8 @@
 		82FAB11521F075B20084BF38 /* BackEventViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackEventViewController.m; sourceTree = "<group>"; };
 		82FAB11721F0792D0084BF38 /* TransparentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransparentViewController.h; sourceTree = "<group>"; };
 		82FAB11821F0792D0084BF38 /* TransparentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransparentViewController.m; sourceTree = "<group>"; };
+		82FAB11A21F085E50084BF38 /* TitleColorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleColorViewController.h; sourceTree = "<group>"; };
+		82FAB11B21F085E50084BF38 /* TitleColorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleColorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +128,8 @@
 				82FAB0DB21F066520084BF38 /* AppDelegate.m */,
 				82FAB0DD21F066520084BF38 /* ViewController.h */,
 				82FAB0DE21F066520084BF38 /* ViewController.m */,
+				82FAB11A21F085E50084BF38 /* TitleColorViewController.h */,
+				82FAB11B21F085E50084BF38 /* TitleColorViewController.m */,
 				82FAB11721F0792D0084BF38 /* TransparentViewController.h */,
 				82FAB11821F0792D0084BF38 /* TransparentViewController.m */,
 				82FAB11421F075B20084BF38 /* BackEventViewController.h */,
@@ -125,6 +138,11 @@
 				82FAB10D21F0703C0084BF38 /* ViewController+Extension.m */,
 				82FAB11021F070AC0084BF38 /* NSObject+ZXLExtension.h */,
 				82FAB10F21F070AC0084BF38 /* NSObject+ZXLExtension.m */,
+				82BBBCE421F183A700D568C9 /* UINavigationController+Extension.h */,
+				82BBBCE521F183A700D568C9 /* UINavigationController+Extension.m */,
+				82BBBCEF21F1B0D000D568C9 /* UINavigationItem+SXFixSpace.h */,
+				82BBBCF021F1B0D000D568C9 /* UINavigationItem+SXFixSpace.m */,
+				82BBBCE721F1A0EF00D568C9 /* TitleWhitebackbg@2x.png */,
 				82FAB11221F0739D0084BF38 /* Titlebackbg@2x.png */,
 				82FAB0E321F066550084BF38 /* Assets.xcassets */,
 				82FAB0E521F066550084BF38 /* LaunchScreen.storyboard */,
@@ -256,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82FAB11321F0739D0084BF38 /* Titlebackbg@2x.png in Resources */,
+				82BBBCE821F1A0F000D568C9 /* TitleWhitebackbg@2x.png in Resources */,
 				82FAB0E721F066550084BF38 /* LaunchScreen.storyboard in Resources */,
 				82FAB0E421F066550084BF38 /* Assets.xcassets in Resources */,
 			);
@@ -284,11 +303,14 @@
 			files = (
 				82FAB10E21F0703C0084BF38 /* ViewController+Extension.m in Sources */,
 				82FAB11921F0792D0084BF38 /* TransparentViewController.m in Sources */,
+				82BBBCF121F1B0D000D568C9 /* UINavigationItem+SXFixSpace.m in Sources */,
 				82FAB0DF21F066520084BF38 /* ViewController.m in Sources */,
 				82FAB11621F075B20084BF38 /* BackEventViewController.m in Sources */,
 				82FAB0EA21F066550084BF38 /* main.m in Sources */,
+				82FAB11C21F085E50084BF38 /* TitleColorViewController.m in Sources */,
 				82FAB11121F070AC0084BF38 /* NSObject+ZXLExtension.m in Sources */,
 				82FAB0DC21F066520084BF38 /* AppDelegate.m in Sources */,
+				82BBBCE621F183A700D568C9 /* UINavigationController+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +476,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7T87C2R7MW;
 				INFOPLIST_FILE = UINavigationBarDome/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -471,6 +494,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7T87C2R7MW;
 				INFOPLIST_FILE = UINavigationBarDome/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
