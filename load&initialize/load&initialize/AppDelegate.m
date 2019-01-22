@@ -1,13 +1,12 @@
 //
 //  AppDelegate.m
-//  UINavigationBarDome
+//  load&initialize
 //
-//  Created by 张小龙 on 2019/1/17.
+//  Created by 张小龙 on 2019/1/21.
 //  Copyright © 2019 张小龙. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,36 +16,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  
-    //设置顶部透明
-    [[UINavigationBar appearance] setBackgroundImage:[self createImageWithColor:[UIColor clearColor]] forBarMetrics:UIBarMetricsDefault];
-    [[UINavigationBar appearance] setShadowImage:[self createImageWithColor:[UIColor clearColor]]];
-    
-    //设置返回按钮
-    [UINavigationBar appearance].backIndicatorImage = [[UIImage imageNamed:@"Titlebackbg.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    [UINavigationBar appearance].backIndicatorTransitionMaskImage = [[UIImage imageNamed:@"Titlebackbg.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    UIViewController *mainVC = [[ViewController alloc] init];
-    UINavigationController *pNav = [[UINavigationController alloc] initWithRootViewController:mainVC];
-    [pNav.navigationBar setTintColor:[UIColor blackColor]];
-    
-    self.window.rootViewController = pNav;
-    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;
 }
 
-- (UIImage *)createImageWithColor:(UIColor *)color{
-    CGRect rect = CGRectMake(0.0f, 0.0f, 100.0f, 100.0f);
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context, [color CGColor]);
-    CGContextFillRect(context, rect);
-    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return theImage;
-}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

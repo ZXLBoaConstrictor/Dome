@@ -20,9 +20,10 @@
     // Do any additional setup after loading the view.
 }
 
--(void)navigationShouldPopOnBackButton{
+-(BOOL)navigationShouldPopOnBackButton{
     NSLog(@"返回 ---事件");
-    [self.navigationController popViewControllerAnimated:YES];
+
+    return YES;
 }
 /*
 #pragma mark - Navigation

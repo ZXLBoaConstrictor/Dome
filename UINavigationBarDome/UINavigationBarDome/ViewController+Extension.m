@@ -16,15 +16,49 @@
 +(void)load{
     //runtime 函数替换
     [[self class] zxlSwizzleMethod:@selector(viewDidLoad) swizzledSelector:@selector(replace_viewDidLoad)];
+    [[self class] zxlSwizzleMethod:@selector(viewWillAppear:) swizzledSelector:@selector(replace_viewWillAppear:)];
 }
 
 - (void)replace_viewDidLoad{
     [self replace_viewDidLoad];
+    if ([self isKindOfClass:[UINavigationController class]]) {
+        return;
+    }
     
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleDone target:nil action:nil];//隐藏返回按钮跟随的字体
 }
 
+-(void)replace_viewWillAppear:(BOOL)animated{
+    [self replace_viewWillAppear:animated];
+    
+    if ([self isKindOfClass:[UINavigationController class]]) {
+        return;
+    }
+    
+    if (self.navigationController &&
+        self.navigationController.presentationController &&
+        [[UIApplication sharedApplication].keyWindow.rootViewController isKindOfClass:[UINavigationController class]] &&
+        self.navigationController != [UIApplication sharedApplication].keyWindow.rootViewController) {
+        if (self.navigationController.viewControllers.count == 1) {
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+            [button setImage:[UIImage imageNamed:@"Titlebackbg.png"] forState:UIControlStateNormal];
+            button.frame = CGRectMake(0, 0, 70, 30);
+            button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+            button.imageEdgeInsets = UIEdgeInsetsMake(-10, 8, 0, 0);
+            [button addTarget:self action:@selector(onBack) forControlEvents:UIControlEventTouchUpInside];
+            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+        }
+    }
+}
+
+-(void)onBack{
+    if([self respondsToSelector:@selector(navigationShouldPopOnBackButton)]) {
+        [self navigationShouldPopOnBackButton];
+    }else{
+      [self dismissViewControllerAnimated:YES completion:nil];
+    }
+}
 
 @end
 

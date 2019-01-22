@@ -39,6 +39,8 @@
     
     NSLog(@"%f",self.view.frame.size.height);
     
+    
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -59,6 +61,12 @@
             break;
         case 3:{
             [self.navigationController pushViewController:[TitleColorViewController new] animated:YES];
+        }
+            break;
+        case 4:{
+            UINavigationController * navTabBar = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
+            navTabBar.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+            [self.navigationController presentViewController:navTabBar animated:YES completion:nil];
         }
             break;
         default:{
