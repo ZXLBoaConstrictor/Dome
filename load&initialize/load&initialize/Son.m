@@ -10,6 +10,6 @@
 
 @implementation Son
 +(void)initialize{
-    NSLog(@"Son initialize");
+    NSLog(@"%s",__FUNCTION__);
 }
 @end

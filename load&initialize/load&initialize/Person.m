@@ -10,10 +10,10 @@
 
 @implementation Person
 +(void)load{
-    NSLog(@"Person load");
+    NSLog(@"%s",__FUNCTION__);
 }
 
 +(void)initialize{
-    NSLog(@"Person initialize");
+    NSLog(@"%s",__FUNCTION__);
 }
 @end

@@ -10,6 +10,6 @@
 
 @implementation Father
 +(void)initialize{
-    NSLog(@"Father initialize");
+    NSLog(@"%s",__FUNCTION__);
 }
 @end

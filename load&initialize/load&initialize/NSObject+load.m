@@ -10,7 +10,7 @@
 
 @implementation NSObject (load)
 +(void)load{
-    NSLog(@"NSObject load");
+    NSLog(@"%s",__FUNCTION__);
 }
 
 @end

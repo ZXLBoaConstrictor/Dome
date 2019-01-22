@@ -10,6 +10,6 @@
 
 @implementation GrandFatherBrother
 +(void)initialize{
-    NSLog(@"GrandFatherBrother initialize");
+    NSLog(@"%s",__FUNCTION__);
 }
 @end
