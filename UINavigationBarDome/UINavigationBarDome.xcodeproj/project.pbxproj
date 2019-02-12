@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		825E1EA12212764F00C3033E /* UIPopManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 825E1EA02212764F00C3033E /* UIPopManager.m */; };
+		825E1EA422127A0B00C3033E /* UIPopBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 825E1EA322127A0B00C3033E /* UIPopBackgroundView.m */; };
+		825E1EA722127AEA00C3033E /* UIPopTipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825E1EA622127AEA00C3033E /* UIPopTipsViewController.m */; };
 		82BBBCE621F183A700D568C9 /* UINavigationController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BBBCE521F183A700D568C9 /* UINavigationController+Extension.m */; };
 		82BBBCE821F1A0F000D568C9 /* TitleWhitebackbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82BBBCE721F1A0EF00D568C9 /* TitleWhitebackbg@2x.png */; };
 		82BBBCF121F1B0D000D568C9 /* UINavigationItem+SXFixSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BBBCF021F1B0D000D568C9 /* UINavigationItem+SXFixSpace.m */; };
@@ -43,6 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		825E1E9F2212764F00C3033E /* UIPopManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIPopManager.h; sourceTree = "<group>"; };
+		825E1EA02212764F00C3033E /* UIPopManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIPopManager.m; sourceTree = "<group>"; };
+		825E1EA222127A0B00C3033E /* UIPopBackgroundView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIPopBackgroundView.h; sourceTree = "<group>"; };
+		825E1EA322127A0B00C3033E /* UIPopBackgroundView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIPopBackgroundView.m; sourceTree = "<group>"; };
+		825E1EA522127AEA00C3033E /* UIPopTipsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIPopTipsViewController.h; sourceTree = "<group>"; };
+		825E1EA622127AEA00C3033E /* UIPopTipsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIPopTipsViewController.m; sourceTree = "<group>"; };
 		82BBBCE421F183A700D568C9 /* UINavigationController+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Extension.h"; sourceTree = "<group>"; };
 		82BBBCE521F183A700D568C9 /* UINavigationController+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Extension.m"; sourceTree = "<group>"; };
 		82BBBCE721F1A0EF00D568C9 /* TitleWhitebackbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TitleWhitebackbg@2x.png"; sourceTree = "<group>"; };
@@ -101,6 +110,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		825E1E9E2212761200C3033E /* PopView */ = {
+			isa = PBXGroup;
+			children = (
+				825E1E9F2212764F00C3033E /* UIPopManager.h */,
+				825E1EA02212764F00C3033E /* UIPopManager.m */,
+				825E1EA222127A0B00C3033E /* UIPopBackgroundView.h */,
+				825E1EA322127A0B00C3033E /* UIPopBackgroundView.m */,
+				825E1EA522127AEA00C3033E /* UIPopTipsViewController.h */,
+				825E1EA622127AEA00C3033E /* UIPopTipsViewController.m */,
+			);
+			path = PopView;
+			sourceTree = "<group>";
+		};
 		82FAB0CE21F066520084BF38 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +146,7 @@
 		82FAB0D921F066520084BF38 /* UINavigationBarDome */ = {
 			isa = PBXGroup;
 			children = (
+				825E1E9E2212761200C3033E /* PopView */,
 				82FAB0DA21F066520084BF38 /* AppDelegate.h */,
 				82FAB0DB21F066520084BF38 /* AppDelegate.m */,
 				82FAB0DD21F066520084BF38 /* ViewController.h */,
@@ -305,10 +328,13 @@
 				82FAB11921F0792D0084BF38 /* TransparentViewController.m in Sources */,
 				82BBBCF121F1B0D000D568C9 /* UINavigationItem+SXFixSpace.m in Sources */,
 				82FAB0DF21F066520084BF38 /* ViewController.m in Sources */,
+				825E1EA422127A0B00C3033E /* UIPopBackgroundView.m in Sources */,
 				82FAB11621F075B20084BF38 /* BackEventViewController.m in Sources */,
+				825E1EA722127AEA00C3033E /* UIPopTipsViewController.m in Sources */,
 				82FAB0EA21F066550084BF38 /* main.m in Sources */,
 				82FAB11C21F085E50084BF38 /* TitleColorViewController.m in Sources */,
 				82FAB11121F070AC0084BF38 /* NSObject+ZXLExtension.m in Sources */,
+				825E1EA12212764F00C3033E /* UIPopManager.m in Sources */,
 				82FAB0DC21F066520084BF38 /* AppDelegate.m in Sources */,
 				82BBBCE621F183A700D568C9 /* UINavigationController+Extension.m in Sources */,
 			);
