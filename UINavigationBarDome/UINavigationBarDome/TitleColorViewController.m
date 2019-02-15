@@ -7,7 +7,7 @@
 //
 
 #import "TitleColorViewController.h"
-
+#import "UIButton+Extension.h"
 
 @interface TitleColorViewController ()<UIGestureRecognizerDelegate>
 @end
@@ -29,11 +29,10 @@
     [button setImage:[UIImage imageNamed:@"TitleWhitebackbg.png"] forState:UIControlStateNormal];
     button.frame = CGRectMake(0, 0, 70, 30);
     button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-    button.imageEdgeInsets = UIEdgeInsetsMake(-10, 8, 0, 0);
+    button.imageEdgeInsets = UIEdgeInsetsMake(-9, 8.2, 0, 0);
+    button.navigationBarBack = YES;
     [button addTarget:self action:@selector(onBack) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
-    
-//    self.navigationItem.titleView = 
 }
 
 
