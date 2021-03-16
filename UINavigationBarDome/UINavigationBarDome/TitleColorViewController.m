@@ -22,6 +22,10 @@
     // Do any additional setup after loading the view.
 }
 
+-(void)dealloc{
+    NSLog(@"%s",__func__);
+}
+
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
@@ -30,7 +34,7 @@
     button.frame = CGRectMake(0, 0, 70, 30);
     button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     button.imageEdgeInsets = UIEdgeInsetsMake(-9, 8.2, 0, 0);
-    button.navigationBarBack = YES;
+//    button.navigationBarBack = YES;
     [button addTarget:self action:@selector(onBack) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
 }

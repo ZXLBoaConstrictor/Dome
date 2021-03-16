@@ -24,7 +24,7 @@
             if ([NSStringFromClass(subview.class) containsString:@"ContentView"]) {
                 UIEdgeInsets edgeInsets = subview.layoutMargins;
                 edgeInsets.left = 0;
-                subview.layoutMargins = edgeInsets;//可修正iOS11之后的偏移
+//                subview.layoutMargins = edgeInsets;//可修正iOS11之后的偏移
                 break;
             }
         }
@@ -39,5 +39,12 @@
         }
     }
 }
-
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    if ([self pointInside:point withEvent:event]) {
+         self.userInteractionEnabled = YES;
+    } else {
+        self.userInteractionEnabled = NO;
+    }
+    return [super hitTest:point withEvent:event];
+}
 @end

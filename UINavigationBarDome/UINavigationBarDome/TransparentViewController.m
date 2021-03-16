@@ -52,6 +52,10 @@
 -(void)popTipsDown:(id)sender{
     [UIPopManager showTipsContent:@"这是一个提示信息，别管它有多长，现在字数够了！！！" with:160 direction:UIPopoverArrowDirectionDown cornerRadius:6 sender:sender navigationController:self.navigationController];
 }
+
+-(void)dealloc{
+    NSLog(@"%s",__func__);
+}
 /*
 #pragma mark - Navigation
 

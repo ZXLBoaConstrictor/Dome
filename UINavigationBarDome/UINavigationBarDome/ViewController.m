@@ -21,12 +21,12 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
     
-    if (_titleView == nil){
-        _titleView = [[UIImageView alloc] init]; //用UIImageView 这里可以快速实现你想要的任何顶部颜色
-        _titleView.backgroundColor = [UIColor whiteColor];
-        _titleView.frame = CGRectMake(0, 0, self.view.frame.size.width, [[UIApplication sharedApplication] statusBarFrame].size.height + self.navigationController.navigationBar.frame.size.height);
-        [self.view addSubview:_titleView];
-    }
+//    if (_titleView == nil){
+//        _titleView = [[UIImageView alloc] init]; //用UIImageView 这里可以快速实现你想要的任何顶部颜色
+//        _titleView.backgroundColor = [UIColor whiteColor];
+//        _titleView.frame = CGRectMake(0, 0, self.view.frame.size.width, [[UIApplication sharedApplication] statusBarFrame].size.height + self.navigationController.navigationBar.frame.size.height);
+//        [self.view addSubview:_titleView];
+//    }
     
     self.title = [NSString stringWithFormat:@"第%lu个界面",self.navigationController.viewControllers.count];
     
@@ -36,11 +36,6 @@
     button.backgroundColor = [UIColor greenColor];
     [button addTarget:self action:@selector(nextPage) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
-    
-    NSLog(@"%f",self.view.frame.size.height);
-    
-    
-    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -60,7 +55,16 @@
         }
             break;
         case 3:{
-            [self.navigationController pushViewController:[TitleColorViewController new] animated:YES];
+            
+            UIWindow * window = [UIApplication sharedApplication].delegate.window;
+            if (window.rootViewController){
+                window.rootViewController = nil;
+            }
+            
+            TitleColorViewController *mainVC = [[TitleColorViewController alloc] init];
+            UINavigationController *pNav = [[UINavigationController alloc] initWithRootViewController:mainVC];
+            window.rootViewController = pNav;
+//            [self.navigationController pushViewController:[TitleColorViewController new] animated:YES];
         }
             break;
         case 4:{
